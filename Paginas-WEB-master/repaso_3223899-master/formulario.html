@@ -1,52 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registro - Página de Viajes</title>
+<title>Login - Agencia de Viajes</title>
+
 <style>
-    nav {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
-     body {
-        height: 100vh;
-        display: flex;
-    }
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+nav {
+    background: #2c3e50;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    height: 90vh;
+}
+
+/* Slider */
+.slider {
+    width: 60%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 12s infinite;
+}
+
+.slide {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+}
+
+/* Colores de cada diapositiva */
+.slide:nth-child(1) { background: #3498db; }
+.slide:nth-child(2) { background: #16a085; }
+.slide:nth-child(3) { background: #e67e22; }
+
+
+@keyframes slide {
+    0%, 30% { transform: translateX(0); }
+    35%, 65% { transform: translateX(-100%); }
+    70%, 100% { transform: translateX(-200%); }
+}
+
+.login {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ecf0f1;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #2980b9;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>AGENCIA DE VIAJES</h1>
+    <h1 style="text-align:center;">AGENCIA DE VIAJES</h1>
 </header>
 
 <nav>
-    
     <a href="index.html">Inicio</a>
     <a href="pagina3.html">Culturas</a>
     <a href="Viajes.html">Vuelos</a>
-    <a href="pagina4.html">hospedaje</a>
+    <a href="pagina4.html">Hospedaje</a>
     <a href="pagina5.html">Consejos</a>
-    <a href="formulario.html"> Iniciar Secion / Registrarte</a>
+    <a href="formulario.html">Iniciar Sesión</a>
 </nav>
-    <h2>Registro e Ingreso de Usuarios</h2>
-    <h3>Iniciar Sesión</h3>
-<form>
 
+<div class="container">
 
-    <label>Correo electrónico:</label><br>
-    <input type="email" name="correo" required>
-    <br><br>
-    <label>Contraseña:</label>
-    <br>
-    <input type="password" name="password" required>
-    <br><br>
-    <input type="submit" value="Ingresar">
+    <!-- Diapositivas -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">✈️ Viaja por el mundo</div>
+            <div class="slide">🌍 Descubre nuevas culturas</div>
+            <div class="slide">🏝️ Vive aventuras únicas</div>
+        </div>
+    </div>
+    <div class="login">
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+
+            <form>
+                <label>Correo electrónico:</label>
+                <input type="email" name="correo" required>
+
+                <label>Contraseña:</label>
+                <input type="password" name="password" required>
+
+                <button type="submit">Ingresar</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
