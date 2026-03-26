@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - Agencia de Viajes</title>
-
 <style>
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +13,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Navbar */
 nav {
     background: #2c3e50;
     padding: 15px;
@@ -28,13 +25,11 @@ nav a {
     text-decoration: none;
 }
 
-/* Contenedor principal */
 .container {
     display: flex;
     height: 90vh;
 }
 
-/* Slider */
 .slider {
     width: 60%;
     overflow: hidden;
@@ -62,11 +57,17 @@ nav a {
 .slide:nth-child(3) { background: #e67e22; }
 
 
-@keyframes slide {
-    0%, 30% { transform: translateX(0); }
-    35%, 65% { transform: translateX(-100%); }
-    70%, 100% { transform: translateX(-200%); }
+.slider {
+  display: flex;                 /* contenedor horizontal */
+  animation: slide 10s linear infinite; /* más lenta y repetición infinita */
 }
+
+@keyframes slide {
+  0%, 30% { transform: translateX(0); }
+  35%, 65% { transform: translateX(-100%); }
+  70%, 100% { transform: translateX(-200%); }
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -78,6 +79,7 @@ nav a {
     justify-content: center;
     align-items: center;
     background: #ecf0f1;
+    animation: fadeIn 1.5s forwards; /* Se desvanece */
 }
 
 .login-box {
@@ -131,8 +133,6 @@ nav a {
 </nav>
 
 <div class="container">
-
-    <!-- Diapositivas -->
     <div class="slider">
         <div class="slides">
             <div class="slide">✈️ Viaja por el mundo</div>
