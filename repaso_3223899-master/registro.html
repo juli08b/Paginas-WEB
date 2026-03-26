@@ -1,74 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <hr>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Registro</title>
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  form {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  h3, h4 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+
+
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  </style>
+  </head>
+  <body>
+    <form>
         <h3>Formulario de Registro</h3>
-
-        <form>
-
         <h4>Datos Personales</h4>
-        <label>Nombre completo:</label><br>
+        <label>Nombre completo:</label>
         <input type="text" name="nombre" required>
-        <br><br>
         <label>Tipo de identificacion:</label>
-        <br>
         <select name="tipo_id">
             <option>Cedula</option>
             <option>Pasaporte</option>
             <option>Tarjeta de identidad</option>
         </select>
-        <br><br>
-<hr>
-
-        <label>Numero de identificación:</label><br>
-        <input type="number" name="identificacion"><br><br>
+        
+        <label>Numero de identificación:</label>
+        <input type="number" name="identificacion">
 
         <label>Correo electronico:</label>
-        <br>
         <input type="email" name="correo">
-        <br><br>
-        <label>Número de telefono:</label>
-        <br>
-        <input type="tel" name="telefono">
-        <br><br>
-        <label>Direccion:</label><br>
-        <input type="text" name="direccion">
-        <br><br>
-        <label>Fecha de nacimiento:</label><br>
-        <input type="date" name="fecha">
-        <br><br>
-        <label>Edad:</label><br>
-        <input type="number" name="edad"><br><br>
 
-<hr>
+        <label>Número de telefono:</label>
+        <input type="tel" name="telefono">
+
+        <label>Direccion:</label>
+        <input type="text" name="direccion">
+
+        <label>Fecha de nacimiento:</label>
+        <input type="date" name="fecha">
+
+        <label>Edad:</label>
+        <input type="number" name="edad">
+    <hr>
     <h4>Género</h4>
     <input type="radio" name="genero" value="masculino"> Masculino<br>
     <input type="radio" name="genero" value="femenino"> Femenino<br>
-    <input type="radio" name="genero" value="otro"> Otro<br><br>
-
+    <input type="radio" name="genero" value="otro"> Otro<br>
+    <hr>
     <h4>Preferencias de viaje</h4>
     <input type="checkbox" name="playa"> Playa<br>
     <input type="checkbox" name="montaña"> Montaña<br>
     <input type="checkbox" name="ciudad"> Ciudad<br>
-    <input type="checkbox" name="aventura"> Aventura<br><br>
-    <label>Ocupación:</label><br>
+    <input type="checkbox" name="aventura"> Aventura<br>
+
+    <label>Ocupación:</label>
     <select name="ocupacion">
         <option>Estudiante</option>
         <option>Empleado</option>
         <option>Independiente</option>
         <option>Otro</option>
-    </select><br><br>
-
+    </select>
+    
     <h4>Comentarios</h4> 
-    <textarea name="comentarios" rows="5" cols="40" placeholder="Escribe aquí tus comentarios...">
-    </textarea>
-    <br><br>
+    <textarea name="comentarios" rows="5" placeholder="Escribe aquí tus comentarios..."></textarea>
+
     <input type="submit" value="Registrarse">
+
 </form>
 </body>
 </html>
